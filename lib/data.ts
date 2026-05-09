@@ -63,7 +63,7 @@ export const projects: Project[] = [
     title: 'Binary Bomb — Reverse Engineering',
     desc: 'Defused a multi-phase compiled binary by analyzing control flow, stack frames, and register state at the x86-64 assembly level with no source code access. Used GDB and objdump to reconstruct program logic and navigate failure-triggered execution paths.',
     tags: ['x86-64 Assembly', 'GDB', 'objdump', 'Reverse Engineering', 'C'],
-    category: 'Security · x86 Assembly · C',
+    category: 'Security · Low-level',
   },
   {
     num: '05',
