@@ -14,13 +14,7 @@ export const certs: Cert[] = [
     status: 'verified',
   },
   {
-    name: 'Intro to Foundry & AIP',
-    sub: 'Palantir Platform Foundations',
-    href: 'https://seanconley.dev/website-files/Introduction to Foundry and AIP.pdf',
-    status: 'verified',
-  },
-  {
-    name: 'AWS Cloud Practitioner',
+    name: 'AWS Certified Solutions Architect - Associate',
     sub: 'In progress — expected 2026',
     status: 'pending',
   },
@@ -38,12 +32,12 @@ export const skillCategories: SkillCategory[] = [
 export const projects: Project[] = [
   {
     num: '01',
-    title: 'Portfolio Website',
+    title: 'Portfolio Website v1',
     desc: 'Full-stack personal site with a serverless contact system and CI/CD pipeline via GitHub Actions and Vercel. Demonstrates real-world cloud integration, infrastructure-as-code discipline, and production-grade frontend engineering.',
     tags: ['Next.js', 'React', 'TypeScript', 'AWS Lambda', 'AWS SES', 'CI/CD', 'Tailwind'],
     category: 'Full-Stack · Live',
     live: true,
-    link: 'https://github.com/SeanC19/website.git',
+    link: 'https://website-kappa-ten-65.vercel.app/',
   },
   {
     num: '02',
@@ -130,17 +124,10 @@ export const timeline: TimelineYear[] = [
       },
       {
         type: 'cert',
-        title: 'Palantir Foundry & AIP Builder Foundations',
+        title: 'Certified Palantir Foundry Aware Professional',
         org: 'Palantir Technologies · Verified',
-        date: '2025',
+        date: '2026',
         desc: 'Hands-on training in enterprise data pipeline construction, ontology design, and AI-driven operational workflow development within the Foundry platform.',
-      },
-      {
-        type: 'cert',
-        title: 'Introduction to Palantir Foundry & AIP',
-        org: 'Palantir Technologies · Verified',
-        date: '2025',
-        desc: 'Foundation-level certification covering core Foundry concepts, data ingestion, ontology basics, and AIP capabilities.',
       },
     ],
   },
@@ -173,6 +160,13 @@ export const timeline: TimelineYear[] = [
   {
     year: '2023',
     entries: [
+       {
+        type: 'leadership',
+        title: 'Treasurer, Club Hockey Team',
+        org: 'George Mason University · Aug 2023 — Jun 2025',
+        date: '2023',
+        desc: 'Lead all team operations including logistics, travel coordination, scheduling, and internal communications for the GMU club hockey program.',
+      },
       {
         type: 'education',
         title: 'B.S. Computer Science',
