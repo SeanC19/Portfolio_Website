@@ -60,7 +60,7 @@ export default function About() {
                     sub: 'CompTIA Security+ certified · Risk & secure systems',
                   },
                   {
-                    title: 'Application & Data Engineering',
+                    title: 'Data Engineering',
                     sub: 'Palantir Foundry · Enterprise data pipelines & AI workflows',
                   },
                 ].map((item) => (
