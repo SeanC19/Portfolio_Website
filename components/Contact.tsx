@@ -28,18 +28,16 @@ export default function Contact() {
               </h2>
 
               <p className="text-[14px] text-muted leading-[1.75] mb-8 max-w-[380px] font-light">
-                Looking for internship or co-op opportunities in software
-                engineering, cybersecurity, or enterprise data — especially
-                roles in government-adjacent or defense tech environments.
-                Available summer 2026 out of Fairfax, VA.
+                Actively seeking internships in software engineering, cybersecurity, or 
+                enterprise data roles in the Northern Virginia and D.C. area.
               </p>
 
               {/* Details */}
               <div className="flex flex-col border border-[var(--border)] mb-8">
                 {[
                   { key: 'Location',  val: 'Fairfax, VA', highlight: false },
-                  { key: 'Available', val: 'Summer 2026', highlight: true },
-                  { key: 'Focus',     val: 'SWE · Security · Enterprise Data', highlight: false },
+                  { key: 'Available', val: 'Fall 2026/Spring 2027', highlight: true },
+                  { key: 'Focus',     val: 'SWE · CyberSecurity · Enterprise Data', highlight: false },
                 ].map((row) => (
                   <div
                     key={row.key}
