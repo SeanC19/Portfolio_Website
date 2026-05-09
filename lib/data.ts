@@ -1,16 +1,16 @@
 import { Cert, Project, SkillCategory, SocialLink, TimelineYear } from './types';
 
 export const certs: Cert[] = [
-  {
+ {
     name: 'CompTIA Security+',
     sub: 'Cybersecurity · Risk Management · Secure Systems',
-    href: 'https://seanconley.dev/website-files/CompTIA_Security_Plus_certificate.pdf',
+    href: '/website-files/CompTIA_Security_Plus_certificate.pdf',
     status: 'verified',
   },
   {
     name: 'Certified Palantir Foundry Aware Professional',
     sub: 'Palantir Foundry · Data Pipelines · Ontology · AI Workflows',
-    href: 'https://seanconley.dev/website-files/Foundry and AIP Builder Foundations Quiz.pdf',
+    href: '/website-files/Certified_Palantir_Foundry_Aware_Professional.pdf',
     status: 'verified',
   },
   {
