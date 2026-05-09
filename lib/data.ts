@@ -39,7 +39,7 @@ export const projects: Project[] = [
     category: 'Full-Stack · Live',
     live: true,
     siteUrl: 'https://seanconley.dev',
-    link: 'https://github.com/SeanC19/Portfolio_website',
+    link: 'https://github.com/SeanC19/Portfolio_website.git',
   },
   {
     num: '02',
