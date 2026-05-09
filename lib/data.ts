@@ -135,6 +135,13 @@ export const timeline: TimelineYear[] = [
     year: '2025',
     entries: [
       {
+        type: 'leadership',
+        title: 'President, Club Hockey Team',
+        org: 'George Mason University · Jun 2025 — Present',
+        date: '2024',
+        desc: 'Lead all team operations including logistics, travel coordination, scheduling, and internal communications for the GMU club hockey program.',
+      },
+      {
         type: 'work',
         title: 'Programming Counselor',
         org: 'TIC Summer Camp · Jun 2025 — Aug 2025',
@@ -146,13 +153,6 @@ export const timeline: TimelineYear[] = [
   {
     year: '2024',
     entries: [
-      {
-        type: 'leadership',
-        title: 'President, Club Hockey Team',
-        org: 'George Mason University · Jun 2025 — Present',
-        date: '2024',
-        desc: 'Lead all team operations including logistics, travel coordination, scheduling, and internal communications for the GMU club hockey program.',
-      },
       {
         type: 'honor',
         title: "Dean's List — Summer 2024",
