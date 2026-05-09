@@ -1,26 +1,40 @@
 @import "tailwindcss";
 
+@theme {
+  --color-navy:   #0d1f3c;
+  --color-navy2:  #162848;
+  --color-red:    #b91c1c;
+  --color-red2:   #dc2626;
+  --color-cream:  #f7f4ef;
+  --color-cream2: #ede9e2;
+  --color-cream3: #e4dfd6;
+  --color-muted:  #6b7a94;
+
+  --font-cond: var(--font-barlow-condensed), sans-serif;
+  --font-body: var(--font-barlow), system-ui, sans-serif;
+  --font-mono: var(--font-dm-mono), monospace;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --border:  rgba(13,31,60,0.1);
+  --border2: rgba(13,31,60,0.18);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+html { scroll-behavior: smooth; }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-cream);
+  color: var(--color-navy);
+  overflow-x: hidden;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: none;
 }
