@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Barlow, Barlow_Condensed, DM_Mono } from 'next/font/google';
 import './globals.css';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const barlow = Barlow({
   subsets: ['latin'],
@@ -56,6 +57,10 @@ export default function RootLayout({
         className={`${barlow.variable} ${barlowCondensed.variable} ${dmMono.variable}`}
       >
         {children}
+        <body className={`${barlow.variable} ${barlowCondensed.variable} ${dmMono.variable}`}>
+  {children}
+  <SpeedInsights />
+</body>
       </body>
     </html>
   );
