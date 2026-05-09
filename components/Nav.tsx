@@ -28,7 +28,7 @@ export default function Nav() {
             <span className="w-[7px] h-[7px] rounded-full bg-red2" />
           </div>
           <span className="font-mono text-[9px] text-white/35 tracking-[0.1em] uppercase">
-            Junior · GMU
+            Senior · GMU
           </span>
         </div>
 
