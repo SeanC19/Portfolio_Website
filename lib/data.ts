@@ -118,7 +118,7 @@ export const timeline: TimelineYear[] = [
       {
         type: 'cert',
         title: 'Certified Palantir Foundry Aware Professional',
-        org: 'Palantir Foundry · Earned Apr 2026',
+        org: 'Earned Apr 2026',
         date: '2026',
         desc: 'Hands-on training in enterprise data pipeline construction, ontology design, and AI-driven operational workflow development within the Foundry platform.',
       },
