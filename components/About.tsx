@@ -8,7 +8,7 @@ export default function About() {
             About
           </span>
           <span className="font-mono text-[10px] text-white/30 tracking-[0.08em] hidden md:block">
-            George Mason University · B.S. Computer Science · Junior
+            George Mason University · B.S. Computer Science · Senior
           </span>
         </div>
       </div>
@@ -36,8 +36,8 @@ export default function About() {
               </p>
 
               <p className="text-[15px] text-muted">
-                Actively seeking internships in software engineering, application
-                development, or cybersecurity in the Northern Virginia and D.C. area.
+                Actively seeking internships in software engineering, cybersecurity, or 
+                enterprise data roles in the Northern Virginia and D.C. area.
               </p>
             </div>
 
@@ -53,15 +53,15 @@ export default function About() {
                 {[
                   {
                     title: 'Software Engineering Internship',
-                    sub: 'Summer 2026 · Full-time preferred',
+                    sub: 'Full-stack · Systems · Cloud',
                   },
                   {
-                    title: 'Cybersecurity / Security Engineering',
-                    sub: 'Leverage Security+ foundation in a real environment',
+                    title: 'Cybersecurity & Security Engineering',
+                    sub: 'CompTIA Security+ certified · Risk & secure systems',
                   },
                   {
-                    title: 'Enterprise Data / Government Tech',
-                    sub: 'Palantir ecosystem · Defense-adjacent',
+                    title: 'Application & Data Engineering',
+                    sub: 'Palantir Foundry · Enterprise data pipelines & AI workflows',
                   },
                 ].map((item) => (
                   <div key={item.title} className="flex gap-[10px] items-start">
