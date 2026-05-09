@@ -79,7 +79,7 @@ export default function Hero() {
 
         <div className="flex gap-[10px] flex-wrap">
           <a
-            href="/website-files/Resume.pdf"
+            href="/website-files/Sean_Conley_Resume.pdf"
             download="Sean_Conley_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"

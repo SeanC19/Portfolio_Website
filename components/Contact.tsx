@@ -62,7 +62,7 @@ export default function Contact() {
                     Resume
                   </span>
                   <a
-                    href="/website-files/Resume.pdf" 
+                    href="/website-files/Sean_Conley_Resume.pdf" 
                     download="Sean_Conley_Resume.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
