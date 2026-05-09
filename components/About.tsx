@@ -28,14 +28,14 @@ export default function About() {
                 AI-driven workflows, and application development on the Foundry platform.
               </p>
 
-              <p className="text-[15px] text-muted">
+              <p className="text-[15px] text-navy">
                 Outside of academics, I serve as President of my club hockey team, managing
                 a $75,000 budget and a roster of 20+ athletes and staff. I am also an Eagle
                 Scout, a distinction that reflects my commitment to leadership, community
                 service, and personal accountability.
               </p>
 
-              <p className="text-[15px] text-muted">
+              <p className="text-[15px] text-navy">
                 Actively seeking internships in software engineering, cybersecurity, or 
                 enterprise data roles in the Northern Virginia and D.C. area.
               </p>
