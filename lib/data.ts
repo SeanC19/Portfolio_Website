@@ -200,11 +200,6 @@ export const timeline: TimelineYear[] = [
         date: '2023',
         desc: 'Presented by the Marine Corps to high school students who demonstrate exceptional academic achievement and character.',
       },
-    ],
-  },
-  {
-    year: '2023',
-    entries: [
       {
         type: 'honor',
         title: 'Eagle Scout',
