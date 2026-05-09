@@ -33,7 +33,7 @@ export const projects: Project[] = [
   
   {
     num: '01',
-    title: 'Portfolio Website v2',
+    title: 'Portfolio Website v2 (This Site)',
     desc: 'A single‑page Next.js 16 portfolio built with TypeScript and Tailwind CSS v4, deployed on Vercel with automated CI/CD to showcase my projects, credentials, and experience.',
     tags: ['Next.js 16', 'TypeScript', 'Tailwind v4', 'React', 'Vercel', 'App Router', 'CI/CD'],
     category: 'Live',
