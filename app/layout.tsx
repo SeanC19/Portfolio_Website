@@ -57,10 +57,7 @@ export default function RootLayout({
         className={`${barlow.variable} ${barlowCondensed.variable} ${dmMono.variable}`}
       >
         {children}
-        <body className={`${barlow.variable} ${barlowCondensed.variable} ${dmMono.variable}`}>
-  {children}
-  <SpeedInsights />
-</body>
+        <SpeedInsights />
       </body>
     </html>
   );
