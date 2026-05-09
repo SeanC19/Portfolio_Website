@@ -34,8 +34,8 @@ export const projects: Project[] = [
   {
     num: '01',
     title: 'Portfolio Website v2',
-    desc: 'Complete redesign and rebuild of my personal portfolio. Designed entirely from scratch with a hockey-inspired aesthetic — scoreboard nav, jersey nameplate hero, roster-style project list, and season record timeline. Built in Next.js 16 with TypeScript, Tailwind CSS v4, and deployed on Vercel. Previous iterations explored terminal, Bloomberg, Windows Vista, and OS desktop themes before landing on this version.',
-    tags: ['Next.js', 'TypeScript', 'Tailwind v4', 'React', 'Vercel', 'CI/CD'],
+    desc: 'A single‑page Next.js 16 portfolio built with TypeScript and Tailwind CSS v4, deployed on Vercel with automated CI/CD to showcase my projects, credentials, and experience.',
+    tags: ['Next.js 16', 'TypeScript', 'Tailwind v4', 'React', 'Vercel', 'App Router', 'CI/CD'],
     category: 'Full-Stack · Live',
     live: true,
     siteUrl: 'https://seanconley.dev',
@@ -48,8 +48,8 @@ export const projects: Project[] = [
     tags: ['Next.js', 'React', 'TypeScript', 'AWS Lambda', 'AWS SES', 'CI/CD', 'Tailwind'],
     category: 'Full-Stack · Live',
     live: true,
-    link: 'https://github.com/SeanC19/website.git',
     siteUrl: 'https://website-u0ycsi6c7-sean-conleys-projects.vercel.app/',
+    link: 'https://github.com/SeanC19/website.git',
   },
   {
     num: '03',
