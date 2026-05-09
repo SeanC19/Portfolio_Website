@@ -21,27 +21,23 @@ export default function About() {
             {/* Bio */}
             <div className="flex flex-col gap-4 font-light leading-[1.8]">
               <p className="text-[15px] text-navy">
-                I&apos;m a junior at George Mason University pursuing a B.S. in
-                Computer Science with a focus on software engineering and
-                cybersecurity. I hold the CompTIA Security+ certification and
-                recently completed Palantir Foundry &amp; AIP Builder training —
-                building data pipelines, designing ontologies, and creating
-                AI-driven workflows from the ground up.
+                I&apos;m a Computer Science student at George Mason University, graduating
+                in May 2027, with a focus on software engineering and cybersecurity. I hold
+                the CompTIA Security+ certification and am a Certified Palantir Foundry
+                Aware Professional, with hands-on experience in enterprise data pipelines,
+                AI-driven workflows, and application development on the Foundry platform.
               </p>
 
               <p className="text-[15px] text-muted">
-                My project work spans systems programming in C, full-stack web
-                development, Android mobile, enterprise data pipelines, and
-                reverse engineering — a broader foundation than most CS juniors
-                bring to the table.
+                Outside of academics, I serve as President of my club hockey team, managing
+                a $75,000 budget and a roster of 20+ athletes and staff. I am also an Eagle
+                Scout, a distinction that reflects my commitment to leadership, community
+                service, and personal accountability.
               </p>
 
               <p className="text-[15px] text-muted">
-                Outside of code: Eagle Scout, President of GMU&apos;s club
-                hockey team, Dean&apos;s List honoree, and incoming Director of
-                Computer Science at TIC Summer Camp. I bring the same discipline
-                and leadership instincts to engineering that I&apos;ve built in
-                those roles.
+                Actively seeking internships in software engineering, application
+                development, or cybersecurity in the Northern Virginia and D.C. area.
               </p>
             </div>
 
