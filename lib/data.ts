@@ -10,7 +10,7 @@ export const certs: Cert[] = [
   {
     name: 'Certified Palantir Foundry Aware Professional',
     sub: 'Palantir Foundry · Data Pipelines · Ontology · AI Workflows',
-    href: '/website-files/Certified_Palantir_Foundry_Aware_Professional.pdf',
+    href: '/website-files/Certified_Palantir_Foundry_Aware_Professional.png',
     status: 'verified',
   },
   {
