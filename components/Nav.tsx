@@ -27,7 +27,7 @@ export default function Nav() {
             <span className="w-[7px] h-[7px] rounded-full bg-red2" />
             <span className="w-[7px] h-[7px] rounded-full bg-red2" />
           </div>
-          <span className="font-mono text-[9px] text-white/35 tracking-[0.1em] uppercase">
+          <span className="font-mono text-[9px] text-white/60 tracking-[0.1em] uppercase">
             Senior · GMU
           </span>
         </div>
@@ -43,7 +43,7 @@ export default function Nav() {
               <li key={item.href}>
                 <a
                   href={item.href}
-                  className="font-cond text-xs font-bold tracking-[0.1em] uppercase text-white/45 no-underline px-[14px] h-[52px] flex items-center border-l border-white/[0.06] hover:text-white/90 transition-colors"
+                  className="font-cond text-xs font-bold tracking-[0.1em] uppercase text70 no-underline px-[14px] h-[52px] flex items-center border-l border-white/[0.06] hover:text-white/90 transition-colors"
                 >
                   {item.label}
                 </a>

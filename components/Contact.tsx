@@ -9,7 +9,7 @@ export default function Contact() {
           <span className="font-cond text-xs font-black tracking-[0.18em] uppercase text-cream">
             Contact
           </span>
-          <span className="font-mono text-[10px] text-white/30 tracking-[0.08em] hidden md:block">
+          <span className="font-mono text-[10px] text-white/60 tracking-[0.08em] hidden md:block">
             Open to internships · co-ops · Summer 2026
           </span>
         </div>

@@ -60,7 +60,7 @@ export default function Hero() {
       <div className="bg-navy px-6 md:px-12 py-16 md:py-20 flex flex-col justify-center relative overflow-hidden">
         <div className="absolute -right-[200px] top-1/2 -translate-y-1/2 w-[480px] h-[480px] rounded-full border border-red/20 pointer-events-none hidden md:block" />
 
-        <div className="font-mono text-[11px] text-white/40 tracking-[0.12em] uppercase mb-6 flex items-center gap-[10px]">
+        <div className="font-mono text-[11px] text-white/70 tracking-[0.12em] uppercase mb-6 flex items-center gap-[10px]">
           <span className="w-6 h-px bg-red2 flex-shrink-0" />
           Computer Science · Fairfax, VA · Open to Opportunities
         </div>
