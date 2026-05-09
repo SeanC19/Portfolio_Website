@@ -32,12 +32,13 @@ export const skillCategories: SkillCategory[] = [
 export const projects: Project[] = [
   {
     num: '01',
-    title: 'Portfolio Website v1',
+    title: 'Portfolio Website',
     desc: 'Full-stack personal site with a serverless contact system and CI/CD pipeline via GitHub Actions and Vercel. Demonstrates real-world cloud integration, infrastructure-as-code discipline, and production-grade frontend engineering.',
     tags: ['Next.js', 'React', 'TypeScript', 'AWS Lambda', 'AWS SES', 'CI/CD', 'Tailwind'],
     category: 'Full-Stack · Live',
     live: true,
-    link: 'https://website-kappa-ten-65.vercel.app/',
+    link: 'https://github.com/SeanC19/website.git',
+    siteUrl: 'https://seanconley.dev',
   },
   {
     num: '02',
@@ -165,7 +166,7 @@ export const timeline: TimelineYear[] = [
         title: 'Treasurer, Club Hockey Team',
         org: 'George Mason University · Aug 2023 — Jun 2025',
         date: '2023',
-        desc: 'Lead all team operations including logistics, travel coordination, scheduling, and internal communications for the GMU club hockey program.',
+        desc: 'Aquired EIN and 501(c)(3) status to establishing banking, budgeting, financial compliance systems, and managing a $75K+ annual budget while coordinating with university staff, vendors, and sponsors.',
       },
       {
         type: 'education',
@@ -191,13 +192,13 @@ export const timeline: TimelineYear[] = [
     ],
   },
   {
-    year: '2022',
+    year: '2023',
     entries: [
       {
         type: 'honor',
         title: 'Eagle Scout',
         org: 'Boy Scouts of America',
-        date: '2022',
+        date: '2023',
         desc: 'Highest rank in Scouting, earned by fewer than 4% of all Scouts. Demonstrated multi-year commitment to leadership, community service, and project management.',
       },
     ],

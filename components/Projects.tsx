@@ -30,16 +30,30 @@ function RosterRow({ project }: { project: Project }) {
           ))}
         </div>
 
-        {project.link && (
-          <a
-            href={project.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-mono text-[10px] text-red no-underline tracking-[0.04em] inline-flex items-center gap-1 mt-2 opacity-0 group-hover:opacity-100 transition-opacity"
-          >
-            View on GitHub ↗
-          </a>
-        )}
+        {/* Links */}
+        <div className="flex gap-4 mt-2">
+          {project.siteUrl && (
+            <a
+              href={project.siteUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-mono text-[10px] text-red no-underline tracking-[0.04em] inline-flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity"
+            >
+              Visit Site ↗
+            </a>
+          )}
+
+          {project.link && (
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-mono text-[10px] text-muted no-underline tracking-[0.04em] inline-flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity hover:text-red"
+            >
+              GitHub ↗
+            </a>
+          )}
+        </div>
       </div>
 
       {/* Side — hidden on mobile */}
@@ -57,6 +71,7 @@ function RosterRow({ project }: { project: Project }) {
     </div>
   );
 }
+
 
 export default function Projects() {
   return (

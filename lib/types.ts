@@ -28,6 +28,7 @@ export interface Project {
   category: string;
   live?: boolean;
   link?: string;
+  siteUrl?: string;
 }
 
 export interface Cert {
