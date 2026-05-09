@@ -62,7 +62,7 @@ export default function Hero() {
 
         <div className="font-mono text-[11px] text-white/40 tracking-[0.12em] uppercase mb-6 flex items-center gap-[10px]">
           <span className="w-6 h-px bg-red2 flex-shrink-0" />
-          Software Engineer · Fairfax, VA · Open to Opportunities
+          Computer Science · Fairfax, VA · Open to Opportunities
         </div>
 
         <h1 className="font-cond font-black text-[clamp(3.5rem,12vw,7.5rem)] leading-[0.88] tracking-[0.01em] text-cream uppercase mb-8">
