@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sean Conley — Software Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700;1,800;1,900&family=Barlow:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --navy:   #0d1f3c;
+  --navy2:  #162848;
+  --red:    #b91c1c;
+  --red2:   #dc2626;
+  --cream:  #f7f4ef;
+  --cream2: #ede9e2;
+  --cream3: #e4dfd6;
+  --text:   #0d1f3c;
+  --muted:  #6b7a94;
+  --border: rgba(13,31,60,0.1);
+  --border2:rgba(13,31,60,0.18);
+  --cond:   'Barlow Condensed', sans-serif;
+  --body:   'Barlow', sans-serif;
+  --mono:   'DM Mono', monospace;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--cream);
+  color: var(--text);
+  font-family: var(--body);
+  font-size: 15px;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ── NAV ── */
+nav {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--navy);
+  border-bottom: 3px solid var(--red);
+}
+
+.scoreboard {
+  max-width: 1200px; margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding: 0 2rem;
+  height: 52px;
+}
+
+.sb-left { display: flex; align-items: center; }
+
+.sb-wordmark {
+  font-family: var(--cond);
+  font-size: 16px; font-weight: 800;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--cream); text-decoration: none;
+}
+
+.sb-center {
+  display: flex; flex-direction: column;
+  align-items: center; padding: 0 2rem;
+  border-left: 1px solid rgba(255,255,255,0.08);
+  border-right: 1px solid rgba(255,255,255,0.08);
+}
+
+.period-pips { display: flex; gap: 5px; margin-bottom: 2px; }
+.pip { width: 7px; height: 7px; border-radius: 50%; background: rgba(255,255,255,0.18); }
+.pip.lit { background: var(--red2); }
+
+.period-label {
+  font-family: var(--mono);
+  font-size: 9px; color: rgba(255,255,255,0.35);
+  letter-spacing: 0.1em; text-transform: uppercase;
+}
+
+.sb-right { display: flex; justify-content: flex-end; }
+
+.nav-links { display: flex; list-style: none; }
+
+.nav-links a {
+  font-family: var(--cond);
+  font-size: 12px; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+  text-decoration: none;
+  padding: 0 14px; height: 52px;
+  display: flex; align-items: center;
+  border-left: 1px solid rgba(255,255,255,0.06);
+  transition: color 0.15s;
+}
+.nav-links a:hover { color: rgba(255,255,255,0.9); }
+
+.nav-links .nav-cta {
+  color: var(--cream) !important;
+  background: var(--red);
+  border-left: none !important;
+  padding: 0 18px; margin-left: 8px;
+  transition: background 0.15s !important;
+}
+.nav-links .nav-cta:hover { background: var(--red2) !important; }
+
+/* ── HERO ── */
+#hero {
+  border-bottom: 1px solid var(--border);
+  min-height: calc(100vh - 52px);
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  overflow: hidden;
+}
+
+.hero-left {
+  background: var(--navy);
+  padding: 5rem 3rem 5rem 4rem;
+  display: flex; flex-direction: column;
+  justify-content: center;
+  position: relative; overflow: hidden;
+}
+
+.hero-left::after {
+  content: '';
+  position: absolute; right: -200px; top: 50%;
+  transform: translateY(-50%);
+  width: 480px; height: 480px; border-radius: 50%;
+  border: 1.5px solid rgba(185,28,28,0.2);
+  pointer-events: none;
+}
+
+.hero-eyebrow {
+  font-family: var(--mono);
+  font-size: 11px; color: rgba(255,255,255,0.4);
+  letter-spacing: 0.12em; text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  display: flex; align-items: center; gap: 10px;
+}
+.hero-eyebrow::before { content: ''; width: 24px; height: 1px; background: var(--red2); flex-shrink: 0; }
+
+.hero-name {
+  font-family: var(--cond);
+  font-size: clamp(4rem, 8vw, 7.5rem);
+  font-weight: 900; line-height: 0.88;
+  letter-spacing: 0.01em;
+  color: var(--cream); text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+.hero-name em { display: block; font-style: italic; color: rgba(247,244,239,0.5); }
+
+.hero-pitch {
+  font-size: 15px; color: rgba(247,244,239,0.55);
+  line-height: 1.75; max-width: 380px;
+  margin-bottom: 2.5rem; font-weight: 300;
+}
+
+.hero-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+
+.btn-primary {
+  font-family: var(--cond);
+  font-size: 13px; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 11px 24px;
+  background: var(--red); color: var(--cream);
+  text-decoration: none; border: 2px solid var(--red);
+  transition: background 0.15s, border-color 0.15s;
+  display: inline-flex; align-items: center; gap: 6px;
+}
+.btn-primary:hover { background: var(--red2); border-color: var(--red2); }
+
+.btn-ghost {
+  font-family: var(--cond);
+  font-size: 13px; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 11px 24px;
+  background: transparent; color: rgba(247,244,239,0.5);
+  text-decoration: none; border: 2px solid rgba(247,244,239,0.18);
+  transition: border-color 0.15s, color 0.15s;
+}
+.btn-ghost:hover { border-color: rgba(247,244,239,0.6); color: var(--cream); }
+
+/* HERO RIGHT */
+.hero-right {
+  background: var(--cream);
+  padding: 5rem 4rem 5rem 3.5rem;
+  display: flex; flex-direction: column;
+  justify-content: center;
+  border-left: 1px solid var(--border);
+}
+
+.cred-label {
+  font-family: var(--cond);
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 10px;
+}
+.cred-label::after { content: ''; flex: 1; max-width: 40px; height: 1px; background: var(--border2); }
+
+/* Cert list */
+.cert-list {
+  display: flex; flex-direction: column;
+  gap: 1px; background: var(--border);
+  border: 1px solid var(--border);
+  margin-bottom: 2rem;
+}
+
+.cert-row {
+  background: var(--cream);
+  display: flex; align-items: center;
+  gap: 12px; padding: 10px 14px;
+  text-decoration: none; color: inherit;
+  transition: background 0.12s;
+}
+.cert-row:hover { background: var(--cream2); }
+
+.cert-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--red); flex-shrink: 0;
+}
+.cert-dot.pending { background: var(--muted); }
+
+.cert-info { flex: 1; }
+
+.cert-name {
+  font-family: var(--cond);
+  font-size: 13px; font-weight: 700;
+  letter-spacing: 0.02em; color: var(--navy);
+  text-transform: uppercase;
+}
+
+.cert-sub {
+  font-family: var(--mono);
+  font-size: 10px; color: var(--muted); margin-top: 1px;
+}
+
+.cert-badge {
+  font-family: var(--mono);
+  font-size: 9px; letter-spacing: 0.06em;
+  padding: 2px 7px; flex-shrink: 0;
+}
+.cert-badge.verified { background: rgba(185,28,28,0.08); color: var(--red); border: 1px solid rgba(185,28,28,0.2); }
+.cert-badge.pending { background: rgba(107,122,148,0.08); color: var(--muted); border: 1px solid var(--border2); }
+
+/* Skills */
+.skill-categories { display: flex; flex-direction: column; gap: 6px; }
+
+.skill-cat-row { display: flex; align-items: baseline; gap: 10px; }
+
+.skill-cat-name {
+  font-family: var(--mono);
+  font-size: 10px; color: var(--muted);
+  letter-spacing: 0.06em; width: 80px;
+  flex-shrink: 0; text-transform: uppercase;
+}
+
+.skill-tags { display: flex; flex-wrap: wrap; gap: 4px; }
+
+.skill-tag {
+  font-family: var(--mono);
+  font-size: 10px; padding: 3px 8px;
+  background: var(--cream2);
+  border: 1px solid var(--border2);
+  color: var(--text);
+}
+
+/* ── SECTION STRUCTURE ── */
+.section { border-bottom: 1px solid var(--border); }
+
+.section-inner {
+  max-width: 1200px; margin: 0 auto;
+  padding: 4rem;
+}
+
+.section-header-bar {
+  background: var(--navy);
+  border-bottom: 3px solid var(--red);
+}
+
+.section-header-inner {
+  max-width: 1200px; margin: 0 auto;
+  padding: 0 4rem; height: 40px;
+  display: flex; align-items: center;
+  justify-content: space-between;
+}
+
+.section-title-bar {
+  font-family: var(--cond);
+  font-size: 12px; font-weight: 800;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--cream);
+}
+
+.section-meta-bar {
+  font-family: var(--mono);
+  font-size: 10px; color: rgba(255,255,255,0.3);
+  letter-spacing: 0.08em;
+}
+
+/* ── ROSTER ── */
+.roster-head {
+  display: grid;
+  grid-template-columns: 60px 1fr 180px;
+  padding: 0 0 10px;
+  border-bottom: 2px solid var(--navy);
+}
+
+.roster-head-cell {
+  font-family: var(--cond);
+  font-size: 10px; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--muted);
+}
+
+.roster-row {
+  display: grid;
+  grid-template-columns: 60px 1fr 180px;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--border);
+  align-items: start;
+  transition: background 0.12s;
+}
+.roster-row:last-child { border-bottom: none; }
+.roster-row:hover { background: rgba(13,31,60,0.02); }
+.roster-row:hover .rnum { color: var(--red); }
+
+.rnum {
+  font-family: var(--cond);
+  font-size: 2rem; font-weight: 900; font-style: italic;
+  color: rgba(13,31,60,0.12);
+  transition: color 0.12s; padding-top: 2px; line-height: 1;
+}
+
+.rmain { padding-right: 2rem; }
+
+.rtitle {
+  font-family: var(--cond);
+  font-size: 1.2rem; font-weight: 800;
+  letter-spacing: 0.02em; text-transform: uppercase;
+  color: var(--navy); margin-bottom: 6px; line-height: 1.1;
+}
+
+.rdesc {
+  font-size: 13px; color: var(--muted);
+  line-height: 1.7; margin-bottom: 10px; font-weight: 300;
+}
+
+.rlink {
+  font-family: var(--mono);
+  font-size: 10px; color: var(--red);
+  text-decoration: none; letter-spacing: 0.04em;
+  display: inline-flex; align-items: center; gap: 4px;
+  opacity: 0; transition: opacity 0.12s;
+}
+.roster-row:hover .rlink { opacity: 1; }
+
+.rtags { display: flex; flex-wrap: wrap; gap: 4px; padding-top: 4px; }
+
+.rtag {
+  font-family: var(--mono);
+  font-size: 10px; padding: 2px 7px;
+  border: 1px solid var(--border2);
+  color: var(--muted); background: transparent;
+}
+
+.rside { padding-top: 4px; }
+
+.rcat {
+  font-family: var(--cond);
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 5px;
+}
+
+.rlive {
+  display: inline-block;
+  font-family: var(--mono); font-size: 9px; font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--cream); background: var(--red); padding: 2px 7px;
+}
+
+/* ── FULL TIMELINE ── */
+.timeline-full {
+  position: relative;
+}
+
+/* Vertical spine */
+.timeline-full::before {
+  content: '';
+  position: absolute;
+  left: 110px; top: 0; bottom: 0;
+  width: 1px; background: var(--border2);
+}
+
+.tl-year-group { margin-bottom: 0; }
+
+.tl-year-marker {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 1.5rem;
+  margin-bottom: 0;
+}
+
+.tl-year-label {
+  font-family: var(--cond);
+  font-size: 11px; font-weight: 800;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--muted); text-align: right;
+  padding-top: 14px; padding-right: 0;
+  line-height: 1;
+}
+
+.tl-year-entries {
+  border-left: none;
+  padding-left: 0;
+}
+
+.tl-entry {
+  display: flex; gap: 1.5rem;
+  padding: 12px 0 12px 1.5rem;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+  align-items: flex-start;
+}
+
+.tl-entry:last-child { border-bottom: none; }
+
+/* Dot on spine */
+.tl-entry::before {
+  content: '';
+  position: absolute;
+  left: -5px; top: 18px;
+  width: 9px; height: 9px; border-radius: 50%;
+  background: var(--red);
+  border: 2px solid var(--cream);
+  box-shadow: 0 0 0 1px var(--border2);
+  flex-shrink: 0;
+}
+
+.tl-entry.muted::before { background: var(--muted); }
+
+.tl-type-badge {
+  font-family: var(--mono);
+  font-size: 9px; font-weight: 500;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 2px 8px; flex-shrink: 0;
+  margin-top: 3px; align-self: flex-start;
+  min-width: 90px; text-align: center;
+}
+
+.tl-type-badge.work     { background: rgba(13,31,60,0.08); color: var(--navy); border: 1px solid var(--border2); }
+.tl-type-badge.cert     { background: rgba(185,28,28,0.08); color: var(--red); border: 1px solid rgba(185,28,28,0.2); }
+.tl-type-badge.education{ background: rgba(13,31,60,0.06); color: var(--navy); border: 1px solid var(--border2); }
+.tl-type-badge.honor    { background: rgba(180,140,0,0.08); color: #7a5c00; border: 1px solid rgba(180,140,0,0.25); }
+.tl-type-badge.leadership{ background: rgba(185,28,28,0.06); color: var(--red); border: 1px solid rgba(185,28,28,0.15); }
+.tl-type-badge.upcoming { background: rgba(107,122,148,0.08); color: var(--muted); border: 1px solid var(--border2); }
+
+.tl-body { flex: 1; }
+
+.tl-title {
+  font-family: var(--cond);
+  font-size: 14px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.03em;
+  color: var(--navy); margin-bottom: 2px; line-height: 1.2;
+}
+
+.tl-entry.muted .tl-title { color: var(--muted); }
+
+.tl-org {
+  font-family: var(--mono);
+  font-size: 10px; color: var(--muted);
+  letter-spacing: 0.04em; margin-bottom: 4px;
+}
+
+.tl-desc {
+  font-size: 12px; color: var(--muted);
+  line-height: 1.65; font-weight: 300;
+}
+
+/* ── ABOUT ── */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 5rem; align-items: start;
+}
+
+.about-body {
+  font-size: 15px; color: var(--text);
+  line-height: 1.8; font-weight: 300;
+}
+.about-body p + p { margin-top: 1rem; color: var(--muted); }
+
+.looking-for {
+  border: 1px solid var(--border);
+  background: var(--cream2);
+}
+
+.lf-header {
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--border);
+  background: var(--navy);
+}
+
+.lf-header-text {
+  font-family: var(--cond);
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: rgba(247,244,239,0.5);
+}
+
+.lf-body { padding: 16px; display: flex; flex-direction: column; gap: 10px; }
+
+.lf-item { display: flex; gap: 10px; align-items: flex-start; }
+
+.lf-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--red); flex-shrink: 0; margin-top: 5px;
+}
+
+.lf-title {
+  font-family: var(--cond);
+  font-size: 13px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.04em;
+  color: var(--navy);
+}
+
+.lf-sub { font-size: 12px; color: var(--muted); margin-top: 1px; }
+
+/* ── CONNECT ── */
+.connect-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 5rem; align-items: start;
+}
+
+.connect-heading {
+  font-family: var(--cond);
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
+  font-weight: 900; text-transform: uppercase;
+  line-height: 0.88; color: var(--navy);
+  letter-spacing: 0.01em; margin-bottom: 1.5rem;
+}
+.connect-heading em { font-style: italic; color: var(--red); display: block; }
+
+.connect-sub {
+  font-size: 14px; color: var(--muted);
+  line-height: 1.75; margin-bottom: 2rem;
+  max-width: 380px; font-weight: 300;
+}
+
+.connect-details {
+  display: flex; flex-direction: column;
+  border: 1px solid var(--border);
+  margin-bottom: 2rem;
+}
+
+.cd-row {
+  display: flex; align-items: center;
+  padding: 9px 14px;
+  border-bottom: 1px solid var(--border);
+  background: var(--cream);
+}
+.cd-row:last-child { border-bottom: none; }
+
+.cd-key {
+  font-family: var(--mono);
+  font-size: 10px; color: var(--muted);
+  letter-spacing: 0.06em; width: 90px; flex-shrink: 0;
+}
+
+.cd-val { font-size: 13px; color: var(--text); }
+.cd-val.hl { color: var(--red); font-weight: 500; }
+
+.social-list {
+  display: flex; flex-direction: column;
+  gap: 1px; background: var(--border);
+  border: 1px solid var(--border);
+}
+
+.social-item {
+  display: flex; align-items: center;
+  gap: 12px; padding: 11px 14px;
+  background: var(--cream);
+  text-decoration: none; color: inherit;
+  transition: background 0.12s;
+}
+.social-item:hover { background: var(--cream2); }
+
+.social-badge {
+  font-family: var(--cond);
+  font-size: 11px; font-weight: 800;
+  letter-spacing: 0.06em;
+  width: 34px; height: 34px;
+  background: var(--navy); color: var(--cream);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+
+.social-name {
+  font-family: var(--cond);
+  font-size: 13px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.04em; color: var(--navy);
+}
+
+.social-handle {
+  font-family: var(--mono);
+  font-size: 10px; color: var(--muted); margin-top: 1px;
+}
+
+.social-arr { margin-left: auto; color: var(--muted); font-size: 13px; }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--navy);
+  border-top: 3px solid var(--red);
+  padding: 1.5rem 4rem;
+}
+
+.footer-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: flex; justify-content: space-between; align-items: center;
+}
+
+.footer-text {
+  font-family: var(--mono);
+  font-size: 11px; color: rgba(247,244,239,0.25);
+  letter-spacing: 0.06em; text-transform: uppercase;
+}
+
+/* ── FADE IN ── */
+.fade-in {
+  opacity: 0; transform: translateY(12px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.fade-in.visible { opacity: 1; transform: none; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 960px) {
+  #hero { grid-template-columns: 1fr; }
+  .hero-left { padding: 5rem 2rem 3rem; min-height: 65vh; }
+  .hero-right { padding: 3rem 2rem; }
+  .scoreboard { grid-template-columns: 1fr auto; }
+  .sb-right { display: none; }
+  .section-inner { padding: 3rem 2rem; }
+  .section-header-inner { padding: 0 2rem; }
+  .about-grid, .connect-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .roster-head, .roster-row { grid-template-columns: 50px 1fr; }
+  .rside { display: none; }
+  .timeline-full::before { left: 90px; }
+  .tl-year-marker { grid-template-columns: 90px 1fr; }
+  .tl-type-badge { display: none; }
+  footer { padding: 1.5rem 2rem; }
+  .footer-inner { flex-direction: column; gap: 0.5rem; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="scoreboard">
+    <div class="sb-left">
+      <a href="#hero" class="sb-wordmark">Sean Conley</a>
+    </div>
+    <div class="sb-center">
+      <div class="period-pips">
+        <div class="pip lit"></div>
+        <div class="pip lit"></div>
+        <div class="pip lit"></div>
+      </div>
+      <div class="period-label">Junior · GMU</div>
+    </div>
+    <div class="sb-right">
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#timeline">Timeline</a></li>
+        <li><a href="#contact" class="nav-cta">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-left">
+    <div class="hero-eyebrow">Software Engineer · Fairfax, VA · Open to Opportunities</div>
+    <h1 class="hero-name">Sean<br><em>Conley</em></h1>
+    <p class="hero-pitch">Junior CS student at George Mason University focused on software engineering and cybersecurity. CompTIA Security+ certified. Palantir Foundry trained. I build things that are secure, well-architected, and actually ship.</p>
+    <div class="hero-actions">
+      <a href="https://seanconley.dev/website-files/Resume (Spring 2026) -Sean Conley.pdf" class="btn-primary" target="_blank">Download Resume ↗</a>
+      <a href="#projects" class="btn-ghost">View Projects</a>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="cred-label">Credentials</div>
+    <div class="cert-list">
+      <a href="https://seanconley.dev/website-files/CompTIA_Security_Plus_certificate.pdf" class="cert-row" target="_blank">
+        <div class="cert-dot"></div>
+        <div class="cert-info">
+          <div class="cert-name">CompTIA Security+</div>
+          <div class="cert-sub">Cybersecurity · Risk Management · Secure Systems</div>
+        </div>
+        <span class="cert-badge verified">Verified</span>
+      </a>
+      <a href="https://seanconley.dev/website-files/Foundry and AIP Builder Foundations Quiz.pdf" class="cert-row" target="_blank">
+        <div class="cert-dot"></div>
+        <div class="cert-info">
+          <div class="cert-name">Palantir Foundry & AIP Builder</div>
+          <div class="cert-sub">Data Pipelines · Ontology · AI Workflows</div>
+        </div>
+        <span class="cert-badge verified">Verified</span>
+      </a>
+      <a href="https://seanconley.dev/website-files/Introduction to Foundry and AIP.pdf" class="cert-row" target="_blank">
+        <div class="cert-dot"></div>
+        <div class="cert-info">
+          <div class="cert-name">Intro to Foundry & AIP</div>
+          <div class="cert-sub">Palantir Platform Foundations</div>
+        </div>
+        <span class="cert-badge verified">Verified</span>
+      </a>
+      <div class="cert-row" style="opacity:0.55;cursor:default;">
+        <div class="cert-dot pending"></div>
+        <div class="cert-info">
+          <div class="cert-name">AWS Cloud Practitioner</div>
+          <div class="cert-sub">In progress — expected 2026</div>
+        </div>
+        <span class="cert-badge pending">In Progress</span>
+      </div>
+    </div>
+
+    <div class="cred-label">Technical Skills</div>
+    <div class="skill-categories">
+      <div class="skill-cat-row">
+        <span class="skill-cat-name">Languages</span>
+        <div class="skill-tags">
+          <span class="skill-tag">Python</span><span class="skill-tag">Java</span>
+          <span class="skill-tag">C</span><span class="skill-tag">SQL</span>
+          <span class="skill-tag">TypeScript</span>
+        </div>
+      </div>
+      <div class="skill-cat-row">
+        <span class="skill-cat-name">Web</span>
+        <div class="skill-tags">
+          <span class="skill-tag">React</span><span class="skill-tag">Next.js</span>
+          <span class="skill-tag">Tailwind</span>
+        </div>
+      </div>
+      <div class="skill-cat-row">
+        <span class="skill-cat-name">Cloud</span>
+        <div class="skill-tags">
+          <span class="skill-tag">AWS Lambda</span><span class="skill-tag">AWS SES</span>
+          <span class="skill-tag">Firebase</span>
+        </div>
+      </div>
+      <div class="skill-cat-row">
+        <span class="skill-cat-name">Systems</span>
+        <div class="skill-tags">
+          <span class="skill-tag">x86 ASM</span><span class="skill-tag">GDB</span>
+          <span class="skill-tag">Unix</span><span class="skill-tag">Valgrind</span>
+        </div>
+      </div>
+      <div class="skill-cat-row">
+        <span class="skill-cat-name">Data</span>
+        <div class="skill-tags">
+          <span class="skill-tag">MySQL</span><span class="skill-tag">Oracle SQL</span>
+          <span class="skill-tag">Palantir Foundry</span>
+        </div>
+      </div>
+      <div class="skill-cat-row">
+        <span class="skill-cat-name">Tools</span>
+        <div class="skill-tags">
+          <span class="skill-tag">Git</span><span class="skill-tag">CI/CD</span>
+          <span class="skill-tag">Android Studio</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<div id="about">
+  <div class="section-header-bar">
+    <div class="section-header-inner">
+      <span class="section-title-bar">About</span>
+      <span class="section-meta-bar">George Mason University · B.S. Computer Science · Junior</span>
+    </div>
+  </div>
+  <div class="section">
+    <div class="section-inner">
+      <div class="about-grid fade-in">
+        <div class="about-body">
+          <p>I'm a junior at George Mason University pursuing a B.S. in Computer Science with a focus on software engineering and cybersecurity. I hold the CompTIA Security+ certification and recently completed Palantir Foundry & AIP Builder training — building data pipelines, designing ontologies, and creating AI-driven workflows from the ground up.</p>
+          <p>My project work spans systems programming in C, full-stack web development, Android mobile, enterprise data pipelines, and reverse engineering — a broader foundation than most CS juniors bring to the table.</p>
+          <p>Outside of code: Eagle Scout, President of GMU's club hockey team, Dean's List honoree, and Director of Computer Science at TIC Summer Camp starting summer 2026. I bring the same discipline and leadership instincts to engineering that I've built in those roles.</p>
+        </div>
+        <div class="looking-for">
+          <div class="lf-header">
+            <div class="lf-header-text">Currently Looking For</div>
+          </div>
+          <div class="lf-body">
+            <div class="lf-item">
+              <div class="lf-dot"></div>
+              <div>
+                <div class="lf-title">Software Engineering Internship</div>
+                <div class="lf-sub">Summer 2026 · Full-time preferred</div>
+              </div>
+            </div>
+            <div class="lf-item">
+              <div class="lf-dot"></div>
+              <div>
+                <div class="lf-title">Cybersecurity / Security Engineering</div>
+                <div class="lf-sub">Leverage Security+ foundation in a real environment</div>
+              </div>
+            </div>
+            <div class="lf-item">
+              <div class="lf-dot"></div>
+              <div>
+                <div class="lf-title">Enterprise Data / Government Tech</div>
+                <div class="lf-sub">Palantir ecosystem · Defense-adjacent</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PROJECTS -->
+<div id="projects">
+  <div class="section-header-bar">
+    <div class="section-header-inner">
+      <span class="section-title-bar">Projects</span>
+      <span class="section-meta-bar">7 on the roster</span>
+    </div>
+  </div>
+  <div class="section">
+    <div class="section-inner">
+      <div class="roster-head fade-in">
+        <div class="roster-head-cell">#</div>
+        <div class="roster-head-cell">Project</div>
+        <div class="roster-head-cell">Category</div>
+      </div>
+
+      <div class="roster-row fade-in" style="transition-delay:.04s;">
+        <div class="rnum">01</div>
+        <div class="rmain">
+          <div class="rtitle">Portfolio Website</div>
+          <div class="rdesc">Full-stack personal site with a serverless contact system and CI/CD pipeline via GitHub Actions and Vercel. Demonstrates real-world cloud integration, infrastructure-as-code discipline, and production-grade frontend engineering.</div>
+          <div class="rtags"><span class="rtag">Next.js</span><span class="rtag">React</span><span class="rtag">TypeScript</span><span class="rtag">AWS Lambda</span><span class="rtag">AWS SES</span><span class="rtag">CI/CD</span><span class="rtag">Tailwind</span></div>
+          <a href="https://github.com/SeanC19/website.git" class="rlink" target="_blank">View on GitHub ↗</a>
+        </div>
+        <div class="rside"><div class="rcat">Full-Stack · Live</div><div class="rlive">Live</div></div>
+      </div>
+
+      <div class="roster-row fade-in" style="transition-delay:.07s;">
+        <div class="rnum">02</div>
+        <div class="rmain">
+          <div class="rtitle">Unix Task Manager</div>
+          <div class="rdesc">Shell simulator in C supporting foreground and background execution, full signal handling (SIGINT, SIGTSTP, SIGCHLD, SIGCONT), I/O redirection, and Unix pipe support. Built on a custom doubly linked list with event-based lifecycle logging. Demonstrates strong low-level systems programming competency.</div>
+          <div class="rtags"><span class="rtag">C</span><span class="rtag">GDB</span><span class="rtag">Valgrind</span><span class="rtag">Unix</span><span class="rtag">Signal Handling</span><span class="rtag">IPC</span></div>
+        </div>
+        <div class="rside"><div class="rcat">Systems · C</div></div>
+      </div>
+
+      <div class="roster-row fade-in" style="transition-delay:.10s;">
+        <div class="rnum">03</div>
+        <div class="rmain">
+          <div class="rtitle">Binary Bomb — Reverse Engineering</div>
+          <div class="rdesc">Defused a multi-phase compiled binary by analyzing control flow, stack frames, and register state at the x86-64 assembly level with no source code access. Used GDB and objdump to reconstruct program logic and navigate failure-triggered execution paths. Directly applicable to security engineering and malware analysis work.</div>
+          <div class="rtags"><span class="rtag">x86-64 Assembly</span><span class="rtag">GDB</span><span class="rtag">objdump</span><span class="rtag">Reverse Engineering</span><span class="rtag">C</span></div>
+        </div>
+        <div class="rside"><div class="rcat">Security · Low-Level</div></div>
+      </div>
+
+      <div class="roster-row fade-in" style="transition-delay:.13s;">
+        <div class="rnum">04</div>
+        <div class="rmain">
+          <div class="rtitle">Yahtzee Multiplayer Android Game</div>
+          <div class="rdesc">Real-time multiplayer Yahtzee across multiple Android devices using Firebase Realtime Database for backend synchronization. Implements join-code sessions, synchronized game state, and enforced turn-based logic with a clean XML-based Android UI.</div>
+          <div class="rtags"><span class="rtag">Java</span><span class="rtag">Android Studio</span><span class="rtag">Firebase</span><span class="rtag">XML Layouts</span></div>
+        </div>
+        <div class="rside"><div class="rcat">Mobile · Android</div></div>
+      </div>
+
+      <div class="roster-row fade-in" style="transition-delay:.16s;">
+        <div class="rnum">05</div>
+        <div class="rmain">
+          <div class="rtitle">Palantir Foundry Data Workflow</div>
+          <div class="rdesc">End-to-end data pipeline inside Palantir Foundry — covering ingestion, transformation, ontology modeling, and AI-driven operational actions. Demonstrates enterprise-grade data platform skills directly applicable to government and defense-adjacent environments.</div>
+          <div class="rtags"><span class="rtag">Palantir Foundry</span><span class="rtag">Ontology</span><span class="rtag">AIP</span><span class="rtag">Pipelines</span><span class="rtag">Code Repos</span></div>
+        </div>
+        <div class="rside"><div class="rcat">Enterprise · Data</div></div>
+      </div>
+
+      <div class="roster-row fade-in" style="transition-delay:.19s;">
+        <div class="rnum">06</div>
+        <div class="rmain">
+          <div class="rtitle">Role-Based Form Processing System</div>
+          <div class="rdesc">Multi-stage workflow system supporting applicant, reviewer, and approver roles with enforced state transitions, data validation, and MySQL persistence via JDBC. Built as a team project using Agile methodology with rotating Scrum Masters and UML-guided system architecture.</div>
+          <div class="rtags"><span class="rtag">Java</span><span class="rtag">JDBC</span><span class="rtag">MySQL</span><span class="rtag">Agile</span><span class="rtag">UML</span></div>
+        </div>
+        <div class="rside"><div class="rcat">Backend · Java</div></div>
+      </div>
+
+      <div class="roster-row fade-in" style="transition-delay:.22s;">
+        <div class="rnum">07</div>
+        <div class="rmain">
+          <div class="rtitle">Campus Workshop Registration System</div>
+          <div class="rdesc">Menu-driven CLI application using Java JDBC and Oracle SQL to manage campus workshops and registrations. Supports partial-match search, capacity enforcement, duplicate prevention, and date-stamped registration tracking with comprehensive input validation.</div>
+          <div class="rtags"><span class="rtag">Java</span><span class="rtag">JDBC</span><span class="rtag">Oracle SQL</span><span class="rtag">CLI</span></div>
+        </div>
+        <div class="rside"><div class="rcat">Backend · Database</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FULL TIMELINE -->
+<div id="timeline">
+  <div class="section-header-bar">
+    <div class="section-header-inner">
+      <span class="section-title-bar">Timeline</span>
+      <span class="section-meta-bar">Work · Education · Certifications · Honors</span>
+    </div>
+  </div>
+  <div class="section">
+    <div class="section-inner">
+
+      <div class="timeline-full fade-in">
+
+        <!-- 2026 -->
+        <div class="tl-year-group">
+          <div class="tl-year-marker">
+            <div class="tl-year-label">2026</div>
+            <div class="tl-year-entries">
+
+              <div class="tl-entry muted">
+                <span class="tl-type-badge upcoming">Upcoming</span>
+                <div class="tl-body">
+                  <div class="tl-title">Director of Computer Science</div>
+                  <div class="tl-org">TIC Summer Camp · Jun 2026 — Aug 2026</div>
+                  <div class="tl-desc">Promoted to lead the CS program for the camp — responsible for curriculum design, instructor coordination, and overseeing all programming instruction across age groups.</div>
+                </div>
+              </div>
+
+              <div class="tl-entry muted">
+                <span class="tl-type-badge upcoming">Upcoming</span>
+                <div class="tl-body">
+                  <div class="tl-title">AWS Certified Cloud Practitioner</div>
+                  <div class="tl-org">Amazon Web Services · Expected 2026</div>
+                  <div class="tl-desc">Building on hands-on AWS experience with Lambda, SES, and API Gateway. Currently studying for certification exam.</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- 2025 -->
+        <div class="tl-year-group">
+          <div class="tl-year-marker">
+            <div class="tl-year-label">2025</div>
+            <div class="tl-year-entries">
+
+              <div class="tl-entry">
+                <span class="tl-type-badge work">Work</span>
+                <div class="tl-body">
+                  <div class="tl-title">Programming Counselor</div>
+                  <div class="tl-org">TIC Summer Camp · Jun 2025 — Aug 2025</div>
+                  <div class="tl-desc">Taught programming fundamentals to students across multiple age groups. Developed and delivered hands-on curriculum, managed classroom environment, and mentored junior campers through projects.</div>
+                </div>
+              </div>
+
+              <div class="tl-entry">
+                <span class="tl-type-badge cert">Cert</span>
+                <div class="tl-body">
+                  <div class="tl-title">CompTIA Security+</div>
+                  <div class="tl-org">CompTIA · Verified</div>
+                  <div class="tl-desc">Industry-recognized cybersecurity certification covering network security, threat management, cryptography, identity management, and risk mitigation.</div>
+                </div>
+              </div>
+
+              <div class="tl-entry">
+                <span class="tl-type-badge cert">Cert</span>
+                <div class="tl-body">
+                  <div class="tl-title">Palantir Foundry & AIP Builder Foundations</div>
+                  <div class="tl-org">Palantir Technologies · Verified</div>
+                  <div class="tl-desc">Hands-on training in enterprise data pipeline construction, ontology design, and AI-driven operational workflow development within the Foundry platform.</div>
+                </div>
+              </div>
+
+              <div class="tl-entry">
+                <span class="tl-type-badge cert">Cert</span>
+                <div class="tl-body">
+                  <div class="tl-title">Introduction to Palantir Foundry & AIP</div>
+                  <div class="tl-org">Palantir Technologies · Verified</div>
+                  <div class="tl-desc">Foundation-level certification covering core Foundry concepts, data ingestion, ontology basics, and AIP capabilities.</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- 2024 -->
+        <div class="tl-year-group">
+          <div class="tl-year-marker">
+            <div class="tl-year-label">2024</div>
+            <div class="tl-year-entries">
+
+              <div class="tl-entry">
+                <span class="tl-type-badge leadership">Leadership</span>
+                <div class="tl-body">
+                  <div class="tl-title">President, Club Hockey Team</div>
+                  <div class="tl-org">George Mason University · 2024 — Present</div>
+                  <div class="tl-desc">Lead all team operations including logistics, travel coordination, scheduling, and internal communications for the GMU club hockey program.</div>
+                </div>
+              </div>
+
+              <div class="tl-entry">
+                <span class="tl-type-badge honor">Honor</span>
+                <div class="tl-body">
+                  <div class="tl-title">Dean's List — Summer 2024</div>
+                  <div class="tl-org">George Mason University</div>
+                  <div class="tl-desc">Recognized for academic excellence during the Summer 2024 semester.</div>
+                </div>
+              </div>
+
+              <div class="tl-entry">
+                <span class="tl-type-badge honor">Honor</span>
+                <div class="tl-body">
+                  <div class="tl-title">Dean's List — Spring 2024</div>
+                  <div class="tl-org">George Mason University</div>
+                  <div class="tl-desc">Recognized for academic excellence during the Spring 2024 semester.</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- 2023 -->
+        <div class="tl-year-group">
+          <div class="tl-year-marker">
+            <div class="tl-year-label">2023</div>
+            <div class="tl-year-entries">
+
+              <div class="tl-entry">
+                <span class="tl-type-badge education">Education</span>
+                <div class="tl-body">
+                  <div class="tl-title">B.S. Computer Science</div>
+                  <div class="tl-org">George Mason University · 2023 — Present</div>
+                  <div class="tl-desc">Focus on software engineering and cybersecurity. Coursework includes OS internals, systems programming, databases, software design, and algorithms.</div>
+                </div>
+              </div>
+
+              <div class="tl-entry">
+                <span class="tl-type-badge honor">Honor</span>
+                <div class="tl-body">
+                  <div class="tl-title">AP Scholar Award</div>
+                  <div class="tl-org">College Board · May 2023</div>
+                  <div class="tl-desc">Awarded to students who demonstrate college-level achievement on AP examinations.</div>
+                </div>
+              </div>
+
+              <div class="tl-entry">
+                <span class="tl-type-badge honor">Honor</span>
+                <div class="tl-body">
+                  <div class="tl-title">Marine Corps Scholastic Excellence Award</div>
+                  <div class="tl-org">United States Marine Corps · May 2023</div>
+                  <div class="tl-desc">Presented by the Marine Corps to high school students who demonstrate exceptional academic achievement and character.</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- 2022 -->
+        <div class="tl-year-group">
+          <div class="tl-year-marker">
+            <div class="tl-year-label">2022</div>
+            <div class="tl-year-entries">
+
+              <div class="tl-entry">
+                <span class="tl-type-badge honor">Honor</span>
+                <div class="tl-body">
+                  <div class="tl-title">Eagle Scout</div>
+                  <div class="tl-org">Boy Scouts of America</div>
+                  <div class="tl-desc">Highest rank in Scouting, earned by fewer than 4% of all Scouts. Demonstrated multi-year commitment to leadership, community service, and project management.</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="margin-top:2.5rem; padding-top:2rem; border-top:1px solid var(--border);">
+        <a href="https://seanconley.dev/website-files/Resume (Spring 2026) -Sean Conley.pdf" class="btn-primary" target="_blank">Download Full Resume ↗</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<div id="contact">
+  <div class="section-header-bar">
+    <div class="section-header-inner">
+      <span class="section-title-bar">Contact</span>
+      <span class="section-meta-bar">Open to internships · co-ops · Summer 2026</span>
+    </div>
+  </div>
+  <div class="section">
+    <div class="section-inner">
+      <div class="connect-grid fade-in">
+        <div>
+          <h2 class="connect-heading">Let's build<br><em>something.</em></h2>
+          <p class="connect-sub">Looking for internship or co-op opportunities in software engineering, cybersecurity, or enterprise data — especially roles in government-adjacent or defense tech environments. Available summer 2026 out of Fairfax, VA.</p>
+          <div class="connect-details">
+            <div class="cd-row"><span class="cd-key">Location</span><span class="cd-val">Fairfax, VA</span></div>
+            <div class="cd-row"><span class="cd-key">Available</span><span class="cd-val hl">Summer 2026</span></div>
+            <div class="cd-row"><span class="cd-key">Focus</span><span class="cd-val">SWE · Security · Enterprise Data</span></div>
+            <div class="cd-row">
+              <span class="cd-key">Resume</span>
+              <a href="https://seanconley.dev/website-files/Resume (Spring 2026) -Sean Conley.pdf" target="_blank" style="color:var(--red); font-family:var(--mono); font-size:11px; text-decoration:none;">↗ Download PDF</a>
+            </div>
+          </div>
+          <a href="https://www.linkedin.com/in/sean-conley-235558250/" class="btn-primary" target="_blank">Connect on LinkedIn ↗</a>
+        </div>
+        <div>
+          <div class="cred-label">Profiles</div>
+          <div class="social-list">
+            <a href="https://www.linkedin.com/in/sean-conley-235558250/" class="social-item" target="_blank">
+              <div class="social-badge">IN</div>
+              <div><div class="social-name">LinkedIn</div><div class="social-handle">sean-conley-235558250</div></div>
+              <span class="social-arr">↗</span>
+            </a>
+            <a href="https://github.com/SeanC19" class="social-item" target="_blank">
+              <div class="social-badge">GH</div>
+              <div><div class="social-name">GitHub</div><div class="social-handle">SeanC19</div></div>
+              <span class="social-arr">↗</span>
+            </a>
+            <a href="https://gitlab.orc.gmu.edu/sconley5" class="social-item" target="_blank">
+              <div class="social-badge">GL</div>
+              <div><div class="social-name">GitLab (GMU)</div><div class="social-handle">sconley5</div></div>
+              <span class="social-arr">↗</span>
+            </a>
+            <a href="https://leetcode.com/u/SliverSlick/" class="social-item" target="_blank">
+              <div class="social-badge">LC</div>
+              <div><div class="social-name">LeetCode</div><div class="social-handle">SliverSlick</div></div>
+              <span class="social-arr">↗</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-text">© 2026 Sean Conley · Fairfax, VA</div>
+    <div class="footer-text">seanconley.dev</div>
+  </div>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.06 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
