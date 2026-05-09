@@ -5,11 +5,11 @@ export default function Contact() {
     <div id="contact">
       {/* Section header bar */}
       <div className="bg-navy border-b-[3px] border-red">
-        <div className="max-w-[1200px] mx-auto px-16 h-10 flex items-center justify-between">
+        <div className="max-w-[1200px] mx-auto px-6 md:px-16 h-10 flex items-center justify-between">
           <span className="font-cond text-xs font-black tracking-[0.18em] uppercase text-cream">
             Contact
           </span>
-          <span className="font-mono text-[10px] text-white/30 tracking-[0.08em]">
+          <span className="font-mono text-[10px] text-white/30 tracking-[0.08em] hidden md:block">
             Open to internships · co-ops · Summer 2026
           </span>
         </div>
@@ -17,12 +17,12 @@ export default function Contact() {
 
       {/* Section body */}
       <div className="border-b border-[var(--border)]">
-        <div className="max-w-[1200px] mx-auto px-16 py-16">
-          <div className="fade-in grid grid-cols-[1.2fr_1fr] gap-20 items-start">
+        <div className="max-w-[1200px] mx-auto px-6 md:px-16 py-12 md:py-16">
+          <div className="fade-in grid grid-cols-1 md:grid-cols-[1.2fr_1fr] gap-10 md:gap-20 items-start">
 
             {/* Left */}
             <div>
-              <h2 className="font-cond font-black text-[clamp(2.8rem,5vw,4.5rem)] uppercase leading-[0.88] tracking-[0.01em] text-navy mb-6">
+              <h2 className="font-cond font-black text-[clamp(2.5rem,8vw,4.5rem)] uppercase leading-[0.88] tracking-[0.01em] text-navy mb-6">
                 Let&apos;s build
                 <em className="block not-italic text-red">something.</em>
               </h2>
@@ -86,7 +86,7 @@ export default function Contact() {
             </div>
 
             {/* Right — social links */}
-            <div>
+            <div className="mt-2 md:mt-0">
               <div className="font-cond text-[11px] font-bold tracking-[0.14em] uppercase text-muted mb-5 flex items-center gap-[10px]">
                 Profiles
                 <span className="flex-1 max-w-[40px] h-px bg-[var(--border2)]" />

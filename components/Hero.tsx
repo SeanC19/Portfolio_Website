@@ -54,17 +54,18 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="border-b border-[var(--border)] min-h-[calc(100vh-52px)] grid grid-cols-[1.1fr_1fr] overflow-hidden"
+      className="border-b border-[var(--border)] min-h-[calc(100vh-52px)] grid grid-cols-1 md:grid-cols-[1.1fr_1fr] overflow-hidden"
     >
-      <div className="bg-navy px-12 py-20 flex flex-col justify-center relative overflow-hidden">
-        <div className="absolute -right-[200px] top-1/2 -translate-y-1/2 w-[480px] h-[480px] rounded-full border border-red/20 pointer-events-none" />
+      {/* LEFT */}
+      <div className="bg-navy px-6 md:px-12 py-16 md:py-20 flex flex-col justify-center relative overflow-hidden">
+        <div className="absolute -right-[200px] top-1/2 -translate-y-1/2 w-[480px] h-[480px] rounded-full border border-red/20 pointer-events-none hidden md:block" />
 
         <div className="font-mono text-[11px] text-white/40 tracking-[0.12em] uppercase mb-6 flex items-center gap-[10px]">
           <span className="w-6 h-px bg-red2 flex-shrink-0" />
           Software Engineer · Fairfax, VA · Open to Opportunities
         </div>
 
-        <h1 className="font-cond font-black text-[clamp(4rem,8vw,7.5rem)] leading-[0.88] tracking-[0.01em] text-cream uppercase mb-8">
+        <h1 className="font-cond font-black text-[clamp(3.5rem,12vw,7.5rem)] leading-[0.88] tracking-[0.01em] text-cream uppercase mb-8">
           Sean
           <em className="block not-italic text-cream/50">Conley</em>
         </h1>
@@ -95,7 +96,9 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="bg-cream px-14 py-20 flex flex-col justify-center border-l border-[var(--border)]">
+      {/* RIGHT */}
+      <div className="bg-cream px-6 md:px-14 py-12 md:py-20 flex flex-col justify-center border-t md:border-t-0 md:border-l border-[var(--border)]">
+
         <div className="font-cond text-[11px] font-bold tracking-[0.14em] uppercase text-muted mb-5 flex items-center gap-[10px]">
           Credentials
           <span className="flex-1 max-w-[40px] h-px bg-[var(--border2)]" />
