@@ -62,7 +62,8 @@ export default function Contact() {
                     Resume
                   </span>
                   <a
-                    href="https://seanconley.dev/website-files/Resume (Spring 2026) -Sean Conley.pdf"
+                    href="/website-files/Resume.pdf" 
+                    download="Sean_Conley_Resume.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="font-mono text-[11px] text-red no-underline hover:underline"

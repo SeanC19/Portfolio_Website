@@ -79,7 +79,8 @@ export default function Hero() {
 
         <div className="flex gap-[10px] flex-wrap">
           <a
-            href="https://seanconley.dev/website-files/Resume (Spring 2026) -Sean Conley.pdf"
+            href="/website-files/Resume.pdf"
+            download="Sean_Conley_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="font-cond text-[13px] font-bold tracking-[0.1em] uppercase px-6 py-[11px] bg-red text-cream border-2 border-red hover:bg-red2 hover:border-red2 transition-colors no-underline inline-flex items-center gap-[6px]"
