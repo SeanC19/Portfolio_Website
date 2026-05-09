@@ -43,8 +43,8 @@ export const projects: Project[] = [
   },
   {
     num: '02',
-    title: 'Portfolio Website v1',
-    desc: 'Full-stack personal site with a serverless contact system and CI/CD pipeline via GitHub Actions and Vercel. Demonstrates real-world cloud integration, infrastructure-as-code discipline, and production-grade frontend engineering.',
+    title: 'Full-stack Portfolio Website v1',
+    desc: 'Built a full‑stack personal portfolio website with a responsive UI and a serverless contact form, using a simple component structure and AWS Labda for backend form handling. Deployed on Vercel with a CI/CD pipeline via GitHub Actions.',
     tags: ['Next.js', 'React', 'TypeScript', 'AWS Lambda', 'AWS SES', 'CI/CD', 'Tailwind'],
     category: 'Full-Stack · Live',
     live: true,
