@@ -115,6 +115,20 @@ export const timeline: TimelineYear[] = [
         desc: 'Building on hands-on AWS experience with Lambda, SES, and API Gateway. Currently studying for certification exam.',
         muted: true,
       },
+      {
+        type: 'cert',
+        title: 'Certified Palantir Foundry Aware Professional',
+        org: 'Palantir Foundry · Earned Apr 2026',
+        date: '2026',
+        desc: 'Hands-on training in enterprise data pipeline construction, ontology design, and AI-driven operational workflow development within the Foundry platform.',
+      },
+      {
+        type: 'cert',
+        title: 'CompTIA Security+',
+        org: 'Earned Jan 2026 - Expires Jan 2029',
+        date: '2025',
+        desc: 'Industry-recognized cybersecurity certification covering network security, threat management, cryptography, identity management, and risk mitigation.',
+      },
     ],
   },
   {
@@ -127,20 +141,6 @@ export const timeline: TimelineYear[] = [
         date: '2025',
         desc: 'Taught programming fundamentals to students across multiple age groups. Developed and delivered hands-on curriculum, managed classroom environment, and mentored junior campers through projects.',
       },
-      {
-        type: 'cert',
-        title: 'CompTIA Security+',
-        org: 'CompTIA · Verified',
-        date: '2025',
-        desc: 'Industry-recognized cybersecurity certification covering network security, threat management, cryptography, identity management, and risk mitigation.',
-      },
-      {
-        type: 'cert',
-        title: 'Certified Palantir Foundry Aware Professional',
-        org: 'Palantir Technologies · Verified',
-        date: '2026',
-        desc: 'Hands-on training in enterprise data pipeline construction, ontology design, and AI-driven operational workflow development within the Foundry platform.',
-      },
     ],
   },
   {
@@ -149,7 +149,7 @@ export const timeline: TimelineYear[] = [
       {
         type: 'leadership',
         title: 'President, Club Hockey Team',
-        org: 'George Mason University · 2024 — Present',
+        org: 'George Mason University · Jun 2025 — Present',
         date: '2024',
         desc: 'Lead all team operations including logistics, travel coordination, scheduling, and internal communications for the GMU club hockey program.',
       },
@@ -182,7 +182,7 @@ export const timeline: TimelineYear[] = [
       {
         type: 'education',
         title: 'B.S. Computer Science',
-        org: 'George Mason University · 2023 — Present',
+        org: 'George Mason University · Aug 2023 — Present',
         date: '2023',
         desc: 'Focus on software engineering and cybersecurity. Coursework includes OS internals, systems programming, databases, software design, and algorithms.',
       },
@@ -208,7 +208,7 @@ export const timeline: TimelineYear[] = [
       {
         type: 'honor',
         title: 'Eagle Scout',
-        org: 'Boy Scouts of America',
+        org: 'Boy Scouts of America · April 2023',
         date: '2023',
         desc: 'Highest rank in Scouting, earned by fewer than 4% of all Scouts. Demonstrated multi-year commitment to leadership, community service, and project management.',
       },
