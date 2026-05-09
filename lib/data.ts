@@ -8,8 +8,8 @@ export const certs: Cert[] = [
     status: 'verified',
   },
   {
-    name: 'Palantir Foundry & AIP Builder',
-    sub: 'Data Pipelines · Ontology · AI Workflows',
+    name: 'Certified Palantir Foundry Aware Professional',
+    sub: 'Palantir Foundry · Data Pipelines · Ontology · AI Workflows',
     href: 'https://seanconley.dev/website-files/Foundry and AIP Builder Foundations Quiz.pdf',
     status: 'verified',
   },
