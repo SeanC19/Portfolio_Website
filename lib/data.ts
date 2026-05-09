@@ -97,7 +97,7 @@ export const timeline: TimelineYear[] = [
       },
       {
         type: 'upcoming',
-        title: 'AWS Certified Cloud Practitioner',
+        title: 'AWS Certified Solutions Architect - Associate',
         org: 'Amazon Web Services · Expected 2026',
         date: '2026',
         desc: 'Building on hands-on AWS experience with Lambda, SES, and API Gateway. Currently studying for certification exam.',
