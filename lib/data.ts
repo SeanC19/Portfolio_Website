@@ -188,7 +188,7 @@ export const timeline: TimelineYear[] = [
       },
       {
         type: 'honor',
-        title: 'AP Scholar Award',
+        title: 'AP Scholar With Honor Award',
         org: 'College Board · May 2023',
         date: '2023',
         desc: 'Awarded to students who demonstrate college-level achievement on AP examinations.',
