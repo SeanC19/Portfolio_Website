@@ -24,7 +24,7 @@ const dmMono = DM_Mono({
 export const metadata: Metadata = {
   title: 'Sean Conley - Portfolio',
   description:
-    'Senior CS student at George Mason University focused on software engineering and cybersecurity. CompTIA Security+ certified. Certified Palantir Foundry Aware Professional.',
+    'CS student at George Mason University focused on software engineering and cybersecurity. CompTIA Security+ certified. Certified Palantir Foundry Aware Professional.',
   keywords: [
     'Sean Conley',
     'Software Engineer',
@@ -35,10 +35,15 @@ export const metadata: Metadata = {
     'Palantir Foundry',
   ],
   authors: [{ name: 'Sean Conley' }],
+  icons: {
+    icon: '/favicon.svg',
+    shortcut: '/favicon.svg',
+    apple: '/favicon.svg',
+  },
   openGraph: {
     title: 'Sean Conley — Portfolio',
     description:
-      'Senior CS student at George Mason University focused on software engineering and cybersecurity.',
+      'CS student at George Mason University focused on software engineering and cybersecurity.',
     url: 'https://seanconley.dev',
     siteName: 'Sean Conley',
     locale: 'en_US',
