@@ -10,10 +10,10 @@ function CertRow({ cert }: { cert: Cert }) {
         }`}
       />
       <div className="flex-1">
-        <div className="font-cond text-[13px] font-bold tracking-[0.02em] text-navy uppercase">
+        <div className="font-cond text-[14px] font-bold tracking-[0.02em] text-navy uppercase">
           {cert.name}
         </div>
-        <div className="font-mono text-[10px] text-muted mt-[1px]">
+        <div className="font-mono text-[11px] text-muted mt-[1px]">
           {cert.sub}
         </div>
       </div>
@@ -21,7 +21,7 @@ function CertRow({ cert }: { cert: Cert }) {
         className={`font-mono text-[9px] tracking-[0.06em] px-[7px] py-[2px] flex-shrink-0 border ${
           cert.status === 'verified'
             ? 'bg-red/10 text-red border-red/20'
-            : 'bg-muted/10 text-muted border-muted/30'
+            : 'bg-navy/[0.06] text-navy border-navy/20'
         }`}
       >
         {cert.status === 'verified' ? 'Verified' : 'In Progress'}

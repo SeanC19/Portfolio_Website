@@ -82,7 +82,7 @@ export default function Timeline() {
           <span className="font-cond text-xs font-black tracking-[0.18em] uppercase text-cream">
             Timeline
           </span>
-          <span className="font-mono text-[10px] text-white/30 tracking-[0.08em] hidden md:block">
+          <span className="font-mono text-[10px] text-white/60 tracking-[0.08em] hidden md:block">
             Work · Education · Certifications · Honors
           </span>
         </div>

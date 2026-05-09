@@ -82,7 +82,7 @@ export default function Projects() {
           <span className="font-cond text-xs font-black tracking-[0.18em] uppercase text-cream">
             Projects
           </span>
-          <span className="font-mono text-[10px] text-white/30 tracking-[0.08em]">
+          <span className="font-mono text-[10px] text-white/60 tracking-[0.08em]">
             {projects.length} on the roster
           </span>
         </div>
