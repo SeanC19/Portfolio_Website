@@ -36,7 +36,7 @@ export const projects: Project[] = [
     title: 'Portfolio Website v2',
     desc: 'A single‑page Next.js 16 portfolio built with TypeScript and Tailwind CSS v4, deployed on Vercel with automated CI/CD to showcase my projects, credentials, and experience.',
     tags: ['Next.js 16', 'TypeScript', 'Tailwind v4', 'React', 'Vercel', 'App Router', 'CI/CD'],
-    category: 'Full-Stack · Live',
+    category: 'Live',
     live: true,
     siteUrl: 'https://seanconley.dev',
     link: 'https://github.com/SeanC19/Portfolio_website.git',
