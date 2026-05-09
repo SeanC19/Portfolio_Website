@@ -71,10 +71,10 @@ export default function Hero() {
         </h1>
 
         <p className="text-[15px] text-cream/55 leading-[1.75] max-w-[380px] mb-10 font-light">
-          Junior CS student at George Mason University focused on software
-          engineering and cybersecurity. CompTIA Security+ certified. Palantir
-          Foundry trained. I build things that are secure, well-architected,
-          and actually ship.
+          Senior CS student at George Mason University focused on software
+          engineering and cybersecurity. CompTIA Security+ certified. Certified Palantir
+          Foundry Aware Professional. Experience with full-stack development, secure system design, 
+          and enterprise data workflows on the Foundry platform.
         </p>
 
         <div className="flex gap-[10px] flex-wrap">
