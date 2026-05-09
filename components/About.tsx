@@ -45,14 +45,14 @@ export default function About() {
             <div className="border border-[var(--border)] bg-cream2">
               <div className="px-4 py-[10px] border-b border-[var(--border)] bg-navy">
                 <span className="font-cond text-[11px] font-bold tracking-[0.12em] uppercase text-cream/50">
-                  Currently Looking For
+                  Currently Looking For Opportunities In
                 </span>
               </div>
 
               <div className="p-4 flex flex-col gap-[10px]">
                 {[
                   {
-                    title: 'Software Engineering Internship',
+                    title: 'Software Engineering',
                     sub: 'Full-stack · Systems · Cloud',
                   },
                   {
