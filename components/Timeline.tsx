@@ -120,18 +120,6 @@ export default function Timeline() {
             ))}
 
           </div>
-
-          {/* Resume download */}
-          <div className="mt-10 pt-8 border-t border-[var(--border)]">
-            <a
-              href="https://seanconley.dev/website-files/Resume (Spring 2026) -Sean Conley.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-cond text-[13px] font-bold tracking-[0.1em] uppercase px-6 py-[11px] bg-red text-cream border-2 border-red hover:bg-red2 hover:border-red2 transition-colors no-underline inline-flex items-center gap-[6px]"
-            >
-              Download Full Resume ↗
-            </a>
-          </div>
         </div>
       </div>
     </div>
