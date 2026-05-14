@@ -1,5 +1,62 @@
+'use client';
+
+import { useState, useRef, useEffect } from 'react';
 import { certs, skillCategories } from '@/lib/data';
 import { Cert } from '@/lib/types';
+
+const resumes = [
+  { label: 'SWE Resume', file: 'Resume -Sean Conley SWE.pdf' },
+  { label: 'CYSE Resume', file: 'Resume -Sean Conley CYSE.pdf' },
+];
+
+function ResumeDropdown() {
+  const [open, setOpen] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function handleClick(e: MouseEvent) {
+      if (ref.current && !ref.current.contains(e.target as Node)) {
+        setOpen(false);
+      }
+    }
+    document.addEventListener('mousedown', handleClick);
+    return () => document.removeEventListener('mousedown', handleClick);
+  }, []);
+
+  return (
+    <div ref={ref} className="relative">
+      <button
+        onClick={() => setOpen((o) => !o)}
+        className="font-cond text-[13px] font-bold tracking-[0.1em] uppercase px-6 py-[11px] bg-red text-cream border-2 border-red hover:bg-red2 hover:border-red2 transition-colors inline-flex items-center gap-[6px]"
+      >
+        Resume{' '}
+        <span
+          className="transition-transform duration-150 inline-block"
+          style={{ transform: open ? 'rotate(180deg)' : 'rotate(0deg)' }}
+        >
+          ▾
+        </span>
+      </button>
+      {open && (
+        <div className="absolute top-full left-0 mt-[3px] bg-navy border-2 border-red/40 min-w-full z-10 flex flex-col">
+          {resumes.map(({ label, file }) => (
+            <a
+              key={file}
+              href={`/website-files/${file}`}
+              download={file}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setOpen(false)}
+              className="font-cond text-[12px] font-bold tracking-[0.08em] uppercase px-5 py-[10px] text-cream hover:bg-red/20 transition-colors no-underline flex items-center gap-[6px] whitespace-nowrap"
+            >
+              {label} ↗
+            </a>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
 
 function CertRow({ cert }: { cert: Cert }) {
   const content = (
@@ -78,15 +135,7 @@ export default function Hero() {
         </p>
 
         <div className="flex gap-[10px] flex-wrap">
-          <a
-            href="/website-files/Sean_Conley_Resume.pdf"
-            download="Sean_Conley_Resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-cond text-[13px] font-bold tracking-[0.1em] uppercase px-6 py-[11px] bg-red text-cream border-2 border-red hover:bg-red2 hover:border-red2 transition-colors no-underline inline-flex items-center gap-[6px]"
-          >
-            Download Resume ↗
-          </a>
+          <ResumeDropdown />
 
           <a
             href="#projects"
