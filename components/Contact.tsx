@@ -35,7 +35,7 @@ export default function Contact() {
               {/* Details */}
               <div className="flex flex-col border border-[var(--border)] mb-8">
                 {[
-                  { key: 'Location',  val: 'Fairfax, VA', highlight: false },
+                  { key: 'Location',  val: 'Annandale, VA', highlight: false },
                   { key: 'Available', val: 'Fall 2026/Spring 2027', highlight: true },
                   { key: 'Focus',     val: 'SWE · CyberSecurity · Enterprise Data', highlight: false },
                 ].map((row) => (
