@@ -14,7 +14,11 @@ export default function Home() {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((e) => {
-          if (e.isIntersecting) e.target.classList.add('visible');
+          if (e.isIntersecting) {
+            e.target.classList.add('visible');
+          } else {
+            e.target.classList.remove('visible');
+          }
         });
       },
       { threshold: 0.06 }
