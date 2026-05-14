@@ -114,12 +114,12 @@ export default function Hero() {
       className="border-b border-[var(--border)] min-h-[calc(100vh-52px)] grid grid-cols-1 md:grid-cols-[1.1fr_1fr] overflow-hidden"
     >
       {/* LEFT */}
-      <div className="bg-navy px-6 md:px-12 py-16 md:py-20 flex flex-col justify-center relative overflow-hidden">
+      <div className="bg-navy px-6 md:px-12 py-16 md:py-20 flex flex-col justify-center relative">
         <div className="absolute -right-[200px] top-1/2 -translate-y-1/2 w-[480px] h-[480px] rounded-full border border-red/20 pointer-events-none hidden md:block" />
 
         <div className="font-mono text-[11px] text-white/70 tracking-[0.12em] uppercase mb-6 flex items-center gap-[10px]">
           <span className="w-6 h-px bg-red2 flex-shrink-0" />
-          Computer Science · Fairfax, VA · Open to Opportunities
+          Computer Science · Annandale, VA · Open to Opportunities
         </div>
 
         <h1 className="font-cond font-black text-[clamp(3.5rem,12vw,7.5rem)] leading-[0.88] tracking-[0.01em] text-cream uppercase mb-8">

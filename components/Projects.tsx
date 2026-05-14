@@ -83,7 +83,7 @@ export default function Projects() {
             Projects
           </span>
           <span className="font-mono text-[10px] text-white/60 tracking-[0.08em]">
-            {projects.length} on the roster
+            {projects.length} projects
           </span>
         </div>
       </div>
