@@ -56,14 +56,28 @@ export default function Contact() {
                   </div>
                 ))}
 
-                {/* Resume row */}
+                {/* Resume rows */}
                 <div className="flex items-center px-[14px] py-[9px] bg-cream">
                   <span className="font-mono text-[10px] text-muted tracking-[0.06em] w-[90px] flex-shrink-0">
-                    Resume
+                    Resume (SWE)
                   </span>
                   <a
-                    href="/website-files/Sean_Conley_Resume.pdf" 
-                    download="Sean_Conley_Resume.pdf"
+                    href="/website-files/Resume -Sean Conley SWE.pdf"
+                    download="Resume -Sean Conley SWE.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-mono text-[11px] text-red no-underline hover:underline"
+                  >
+                    ↗ Download PDF
+                  </a>
+                </div>
+                <div className="flex items-center px-[14px] py-[9px] bg-cream">
+                  <span className="font-mono text-[10px] text-muted tracking-[0.06em] w-[90px] flex-shrink-0">
+                    Resume (CYSE)
+                  </span>
+                  <a
+                    href="/website-files/Resume -Sean Conley CYSE.pdf"
+                    download="Resume -Sean Conley CYSE.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="font-mono text-[11px] text-red no-underline hover:underline"
