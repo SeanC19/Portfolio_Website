@@ -37,7 +37,7 @@ function RosterRow({ project }: { project: Project }) {
               href={project.siteUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="font-mono text-[10px] text-navy no-underline tracking-[0.04em] inline-flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity hover:text-red"
+              className="font-mono text-[10px] text-navy no-underline tracking-[0.04em] inline-flex items-center gap-1 md:opacity-0 md:group-hover:opacity-100 transition-opacity hover:text-red"
             >
               Visit Site ↗
             </a>
@@ -48,7 +48,7 @@ function RosterRow({ project }: { project: Project }) {
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="font-mono text-[10px] text-navy no-underline tracking-[0.04em] inline-flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity hover:text-red"
+              className="font-mono text-[10px] text-navy no-underline tracking-[0.04em] inline-flex items-center gap-1 md:opacity-0 md:group-hover:opacity-100 transition-opacity hover:text-red"
             >
               GitHub ↗
             </a>
